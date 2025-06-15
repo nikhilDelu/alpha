@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import socket from "../socket";
 import { useParams } from "react-router-dom";
 import { UserButton, useUser } from "@clerk/clerk-react";
@@ -124,7 +124,6 @@ export default function Room() {
         remoteVideoRef.current.srcObject = stream;
         remoteVideoRef.current.play(); // Force play
         console.log("🎬 remoteVideoRef srcObject set");
-        setRemoteConnected(true);
       }
     };
 
