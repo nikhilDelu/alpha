@@ -13,7 +13,7 @@ export default function Room() {
   const localStreamRef = useRef<MediaStream | null>(null);
   const peerConnectionRef = useRef<RTCPeerConnection | null>(null);
 
-  const [remoteConnected, setRemoteConnected] = useState(false);
+
   useEffect(() => {
     if (remoteVideoRef.current) {
       // @ts-ignore
